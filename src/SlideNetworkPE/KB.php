@@ -22,7 +22,7 @@
      }
 
      public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
-         switch($command->getName()){
+         switch($cmd->getName()) {
              case "knockback":
                  if (!in_array(strtolower($args[0]), array("set", "help", "default"))) {
                     $sender->sendMessage('§9 The argument called§f: "'.$args[0].'" §9dont exist, Try §f/kb help§9 to more information');
